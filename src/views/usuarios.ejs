@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>usuarios</h1>
+    <header>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/productos">Producto</a>
+            <a href="/usuarios">Usuario</a>
+        </nav>
+    </header>
+    <h1>Productos</h1>
+    <main>
+        <section class="products">
+                   <%usuarios.forEach(usuario=>{%>
+                    <div>
+                        <article>
+                            <h2><%=usuario.email%></h2>
+                            <p><%=usuario.username%> </p>
+                            <p><%=usuario.name.firstname%></p>
+                            <p><%=usuario.name.lastname%> </p>
+                            <p><%=usuario.address.city%> </p>
+                            <p><%=usuario.address.street%> </p>
+                        </article>
+
+                    </div>
+                     <%})%>
+        </section>
+    </main>
+</body>
+</html>

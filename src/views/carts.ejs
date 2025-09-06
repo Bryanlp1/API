@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carts</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/productos">Producto</a>
+            <a href="/usuarios">Usuario</a>
+            <a href="/carts">Carritos</a>
+        </nav>
+    </header>
+
+    <h1>Lista de Carritos</h1>
+    <% if(carts && carts.length > 0){ %>
+        <ul>
+            <% carts.forEach(cart => { %>
+                <li>
+                    <strong>Usuario ID:</strong> <%= cart.userId %> <br>
+                    <strong>Fecha:</strong> <%= cart.date %> <br>
+                    <strong>Productos:</strong>
+                    <ul>
+                        <% cart.products.forEach(p => { %>
+                            <li>Producto ID: <%= p.productId %>, Cantidad: <%= p.quantity %></li>
+                        <% }) %>
+                    </ul>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No hay carritos disponibles.</p>
+    <% } %>
+</body>
+</html>
