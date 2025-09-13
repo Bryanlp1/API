@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle Categoría</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/productos">Producto</a>
+      <a href="/categorias">Categorías</a>
+      <a href="/usuarios">Usuario</a>
+      <a href="/carts">Carritos</a>
+      <a href="/inventario">Inventario</a>
+      <a href="/categorias3">Categorías3</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Detalle de Categoría</h1>
+    <p><strong>ID:</strong> <%= categoria.id %></p>
+    <p><strong>Descripción:</strong> <%= categoria.descripcion %></p>
+    <a href="/categorias3" class="btn">⬅ Volver</a>
+  </main>
+</body>
+</html>

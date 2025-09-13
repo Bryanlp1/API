@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalle Producto</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-      <header>
+    <header>
         <nav>
             <a href="/">Inicio</a>
             <a href="/productos">Producto</a>
@@ -14,10 +14,14 @@
             <a href="/usuarios">Usuario</a>
             <a href="/carts">Carritos</a>
             <a href="/inventario">Inventario</a>
-            <a href="/categorias3">Categorías3</a>
         </nav>
     </header>
-    <h1>Hola desde el private</h1>
-    <h2>Mi nombre es Bryan López</h2> 
+
+    <main>
+        <h1>Detalle del Producto</h1>
+        <p><strong>ID:</strong> <%= producto.id %></p>
+        <p><strong>Descripción:</strong> <%= producto.descripcion %></p>
+        <a href="/inventario" class="btn">⬅ Volver al Inventario</a>
+    </main>
 </body>
-</html> 
+</html>

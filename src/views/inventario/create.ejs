@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Producto</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/productos">Producto</a>
+            <a href="/categorias">Categorías</a>
+            <a href="/usuarios">Usuario</a>
+            <a href="/carts">Carritos</a>
+            <a href="/inventario">Inventario</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Agregar Producto al Inventario</h1>
+        <form action="/inventario/create" method="POST">
+            <label for="descripcion">Descripción:</label>
+            <input type="text" name="descripcion" required>
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+        <a href="/inventario" class="btn">⬅ Volver al Inventario</a>
+    </main>
+</body>
+</html>

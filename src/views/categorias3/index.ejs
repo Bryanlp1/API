@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Categorías 3</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/productos">Producto</a>
+      <a href="/categorias">Categorías</a>
+      <a href="/usuarios">Usuario</a>
+      <a href="/carts">Carritos</a>
+      <a href="/inventario">Inventario</a>
+      <a href="/categorias3">Categorías3</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Lista de Categorías (categorias3)</h1>
+    <a class="btn" href="/categorias3/create">➕ Agregar Categoría</a>
+    <ul>
+      <% categorias3.forEach(cat => { %>
+        <li>
+          <a href="/categorias3/<%= cat.id %>">
+            <%= cat.id %> - <%= cat.descripcion %>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>
